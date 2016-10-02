@@ -2,11 +2,11 @@
 <html>
  
 <head>
-  <title>React! React! React!</title>
+  <title>Components</title>
   <script src="https://fb.me/react-15.1.0.js"></script>
   <script src="https://fb.me/react-dom-15.1.0.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-  <style>
+  <!--<style>
     #container {
     padding: 50px;
     background-color: #EEE;
@@ -16,17 +16,44 @@
       font-family: sans-serif;
       color: #0080a8;
     }
-  </style>
+  </style>-->
 </head>
  
 <body>
   <div id="container"></div>
 
+
+
   <script  type="text/babel">
-    ReactDOM.render(
-      <h1>Moni</h1>,
-      document.querySelector("#container")
-    );
+
+    // use the component way to display hello world
+    var HelloWorld = React.createClass({
+      render: function() {
+        return (
+          <p>Hello, componentized world example!</p>
+        );
+      }
+    });
+
+  ReactDOM.render(
+    <div>
+      <HelloWorld/>
+      <HelloWorld/>
+      <HelloWorld/>
+      <HelloWorld/>
+      <HelloWorld/>
+    </div>,
+    document.querySelector("#container")
+  ); 
+
+    // use the render method to display hello world
+    //ReactDOM.render(
+      //<div>
+        //<p>Hello, world using the render method!</p>
+      //</div>,
+      //document.querySelector("#container")
+    //); 
+
   </script>
 </body>
  
