@@ -30,18 +30,18 @@
     var HelloWorld = React.createClass({
       render: function() {
         return (
-          <p>Hello, componentized world example!</p>
+          <p>Hello, {this.props.greetTarget}!</p>
         );
       }
     });
 
   ReactDOM.render(
     <div>
-      <HelloWorld/>
-      <HelloWorld/>
-      <HelloWorld/>
-      <HelloWorld/>
-      <HelloWorld/>
+      <HelloWorld greetTarget="Batman"/>
+      <HelloWorld greetTarget="Wonder Woman"/>
+      <HelloWorld greetTarget="Megaman"/>
+      <HelloWorld greetTarget="Bono"/>
+      <HelloWorld greetTarget="Catwoman"/>
     </div>,
     document.querySelector("#container")
   ); 
