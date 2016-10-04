@@ -26,6 +26,23 @@
 
   <script  type="text/babel">
 
+    var Buttonify = React.createClass({
+      render: function() {
+        return (
+          <div>
+            <button type={this.props.behavior}>{this.props.children}</button>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <div>
+        <Buttonify behavior="Submit">SEND DATA</Buttonify>
+      </div>,
+      document.querySelector("#container")
+    );
+
     // use the component way to display hello world
     var HelloWorld = React.createClass({
       render: function() {
@@ -35,16 +52,16 @@
       }
     });
 
-  ReactDOM.render(
-    <div>
-      <HelloWorld greetTarget="Batman"/>
-      <HelloWorld greetTarget="Wonder Woman"/>
-      <HelloWorld greetTarget="Megaman"/>
-      <HelloWorld greetTarget="Bono"/>
-      <HelloWorld greetTarget="Catwoman"/>
-    </div>,
-    document.querySelector("#container")
-  ); 
+  //ReactDOM.render(
+    //<div>
+      //<HelloWorld greetTarget="Batman"/>
+      //<HelloWorld greetTarget="Wonder Woman"/>
+      //<HelloWorld greetTarget="Megaman"/>
+      //<HelloWorld greetTarget="Bono"/>
+      //<HelloWorld greetTarget="Catwoman"/>
+    //</div>,
+    //document.querySelector("#container")
+  //); 
 
     // use the render method to display hello world
     //ReactDOM.render(
